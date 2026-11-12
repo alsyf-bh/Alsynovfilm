@@ -626,7 +626,7 @@ dlg.addEventListener('close',()=>{pv.replaceChildren();d.documentElement.classLi
 if(!dlg||!hot||typeof dlg.showModal!=='function')return;
 const pv=dlg.querySelector('.pv'),wt=d.getElementById('swt');let id;
 const tick=()=>{wt.textContent=new Date().toLocaleString('ru-RU',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'})};
-hot.addEventListener('click',()=>{pv.replaceChildren(AF.fr(atob('aHR0cHM6Ly92aWRlb3Zzc3lsa3UucnUvdi81OTU5NjQ5OTItMTc5NDQ2NDY0NTE4NTYzMy5VNzc1SQ=='),'?????'));tick();id=setInterval(tick,1000);d.documentElement.classList.add('lock');dlg.showModal()});
+hot.addEventListener('click',()=>{const u=atob('aHR0cHM6Ly92aWRlb3Zzc3lsa3UucnUvdi81OTU5NjQ5OTItMTc5NDQ2NDY0NTE4NTYzMy5VNzc1SQ=='),b=d.createElement('div'),a=d.createElement('a'),sm=d.createElement('small');b.className='dzc';a.className='btn p';a.href=u;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Открыть видео';sm.textContent='Откроется в новой вкладке';b.append(a,sm);pv.replaceChildren(b);tick();id=setInterval(tick,1000);d.documentElement.classList.add('lock');dlg.showModal()});
 dlg.addEventListener('click',e=>{if(!e.target.closest('.pb')||e.target.closest('.px'))dlg.close()});
 dlg.addEventListener('close',()=>{clearInterval(id);pv.replaceChildren();d.documentElement.classList.remove('lock')});})();
 </script>
